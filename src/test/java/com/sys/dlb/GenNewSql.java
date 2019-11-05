@@ -6,10 +6,10 @@ import java.io.FileReader;
 
 public class GenNewSql {
 //    public static String commentFileDir = "D:\\sql_script\\老动力宝库\\comments\\approval";
-    public static String commentFileDir = "D:\\sql_script\\老动力宝库\\comments\\bill";
+    public static String commentFileDir = "D:\\sql_script\\老动力宝库\\comments\\cif";
     public static void main(String[] args) {
         try {
-            File file = new File("D:\\sql_script\\老动力宝库\\credit-bill.sql");
+            File file = new File("D:\\sql_script\\老动力宝库\\credit-cif.sql");
             String fileName = file.getName();
             FileReader fileReader = new FileReader(file);
             BufferedReader bufferedReader = new BufferedReader(fileReader);

@@ -272,7 +272,28 @@ public class StringUtils {
         }
         return new StrBuilder(strLen).append(Character.toLowerCase(str.charAt(0))).append(str.substring(1)).toString();
     }
+    //驼峰转下划线
+    public static String camelToUnderline(String param, Integer charType) {
+        if (param == null || "".equals(param.trim())) {
+            return "";
+        }
+        int len = param.length();
+        StringBuilder sb = new StringBuilder(len);
+        for (int i = 0; i < len; i++) {
+            char c = param.charAt(i);
+            if (Character.isUpperCase(c)) {
+                sb.append("_");
+            }
+            if (charType == 2) {
+                sb.append(Character.toUpperCase(c));  //统一都转大写
+            } else {
+                sb.append(Character.toLowerCase(c));  //统一都转小写
+            }
 
+
+        }
+        return sb.toString();
+    }
     /**
      * 下划线转驼峰命名
      */

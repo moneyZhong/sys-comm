@@ -10,8 +10,8 @@ public class DlbDBOper {
 //    public static String fileDir = "D://g7_code/service-credit-approval/models";
 //    public static String saveDir = "D:\\sql_script\\老动力宝库\\comments\\approval";
 
-    public static String fileDir = "D:\\g7_code\\service-credit-bill\\database";
-    public static String saveDir = "D:\\sql_script\\老动力宝库\\comments\\bill";
+    public static String fileDir = "D:\\g7_code\\service-credit-cif\\models";
+    public static String saveDir = "D:\\sql_script\\老动力宝库\\comments\\cif";
 
     public static Set<String> notReadFile;
     static{
