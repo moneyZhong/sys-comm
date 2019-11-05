@@ -12,7 +12,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class FileSystem {
-    public List<FileInfo> savePublicFile(HttpServletRequest request,String publicFolder) throws Exception {
+    public static List<FileInfo> savePublicFile(HttpServletRequest request,String publicFolder) throws Exception {
         List<FileInfo> list = new ArrayList<FileInfo>();
         //创建一个通用的多部分解析器
         CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver(request.getSession().getServletContext());
@@ -46,10 +46,10 @@ public class FileSystem {
         }
         return list;
     }
-    private String getFileType(File file) {
+    private static String getFileType(File file) {
         return file.getName().substring(file.getName().lastIndexOf(".") + 1);
     }
-    private String getFileType(MultipartFile file){
+    private static String getFileType(MultipartFile file){
         return file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".") + 1);
     }
     private Boolean isImageFile(String fileType) {

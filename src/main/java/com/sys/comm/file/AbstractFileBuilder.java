@@ -36,7 +36,7 @@ public abstract class AbstractFileBuilder implements FileBuilder{
 	public void init(String publicFolder) throws Exception {
 
 		checkFolder(publicFolder);
-		File f = new File(getCurrentFolder() + File.separator
+		File f = new File(getCurrentFolder(publicFolder) + File.separator
 				+ UUIDStr);
 		if (!f.exists()) {
 			f.createNewFile();
@@ -47,7 +47,7 @@ public abstract class AbstractFileBuilder implements FileBuilder{
 
 		}
 		if(multipartFile != null){
-			write(multipartFile.getInputStream(),new FileOutputStream(getCurrentFolder() + File.separator
+			write(multipartFile.getInputStream(),new FileOutputStream(getCurrentFolder(publicFolder) + File.separator
 					+ UUIDStr));
 		}
 	}
@@ -71,7 +71,7 @@ public abstract class AbstractFileBuilder implements FileBuilder{
         }
     } 
 
-	public abstract String getCurrentFolder();
+	public abstract String getCurrentFolder(String publicfolder);
 
 //	private String getCurrentTempFolder() {
 //		return TEMP_FOLDER + File.separator + dateFolder;
@@ -114,8 +114,8 @@ public abstract class AbstractFileBuilder implements FileBuilder{
 	}
 
 	@Override
-	public String getFilePath() {
-		return getCurrentFolder();
+	public String getFilePath(String publicFolder) {
+		return getCurrentFolder(publicFolder);
 	}
 
 	public String getFileType() {
@@ -129,7 +129,7 @@ public abstract class AbstractFileBuilder implements FileBuilder{
 		init(publicFolder);
 		FileInfo fileInfo = new FileInfo();
 		fileInfo.setFileName(reallyName);
-		fileInfo.setFilePath((getFilePath()+File.separator+UUIDStr).replace(publicFolder, ""));//只要相对路径
+		fileInfo.setFilePath((getFilePath(publicFolder)+File.separator+UUIDStr).replace(publicFolder, ""));//只要相对路径
 		//fileInfo.setTempFilePath(getTempFilePath()+File.separator+UUIDStr);
 		fileInfo.setFileType(getFileType());
 		fileInfo.setCreateTime(new Date());

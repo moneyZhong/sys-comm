@@ -15,7 +15,7 @@ public class PublicFileBuilder extends AbstractFileBuilder{
     }
 
     @Override
-    public String getCurrentFolder() {
-        return super.getCurrentPublicFolder();
+    public String getCurrentFolder(String publicFolder) {
+        return super.getCurrentPublicFolder(publicFolder);
     }
 }

@@ -10,7 +10,7 @@ public interface FileBuilder {
 	
 	public String getFileName();
 	
-	public String getFilePath();
+	public String getFilePath(String publicFolder);
 	
 	public String getFileType();
 	
