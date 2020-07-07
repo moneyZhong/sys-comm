@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.sys.comm.dingtalk.message.ActionCardAction;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -150,7 +151,4 @@ public class FastJsonConvertUtil {
 		}
 	}
 
-	public static void main(String[] args) {
-		System.err.println(System.getProperties());
-	}
 }

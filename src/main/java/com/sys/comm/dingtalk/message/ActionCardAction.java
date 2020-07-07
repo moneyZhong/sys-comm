@@ -6,7 +6,7 @@ package com.sys.comm.dingtalk.message;
 public class ActionCardAction {
     private String title;
     private String actionURL;
-
+    public ActionCardAction(){}
     public ActionCardAction(String text, String actionURL) {
         this.title = text;
         this.actionURL = actionURL;

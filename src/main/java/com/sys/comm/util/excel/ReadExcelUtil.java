@@ -21,7 +21,6 @@ import java.util.regex.Pattern;
 
 /**
  * 读取不规则表头excel工具类
- * @author lijie
  */
 public class ReadExcelUtil {
 
