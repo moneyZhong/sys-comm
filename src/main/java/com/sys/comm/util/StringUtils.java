@@ -5,6 +5,9 @@ import org.apache.commons.lang3.text.StrBuilder;
 import java.util.Collection;
 import java.util.Map;
 
+/**
+ * @author zq
+ */
 public class StringUtils {
     public static String getExceptionMsg(Exception arg3){
         StackTraceElement[] t = arg3.getStackTrace();
